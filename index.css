@@ -1,0 +1,236 @@
+  /* ===== RESET ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ===== BODY ===== */
+  body {
+    background-color: #e5e5e5;
+    color: #14213d;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbgcolor {
+    background-color: #14213d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-item {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+
+  .nav-link {
+    color: #ffffff !important;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .vr {
+    border-left: 2px solid #fca311 !important;
+    opacity: 1 !important;
+    height: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #fca311 !important;
+    background-color: #415a77;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+
+  .navbar-toggler {
+    border-color: #fca311;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fca311' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28252,163,17,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  /* ===== CAROUSEL ===== */
+  .carousel-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .carousel-caption p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn-maroon {
+    background-color: #fca311;
+    border: none;
+    color: #14213d;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-maroon:hover,
+  .btn-maroon:focus {
+    background-color: #415a77;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .btn-primary {
+    background: #f7c471;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+    color: #14213d;
+  }
+
+  .btn-primary:hover {
+    background: #415a77;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ===== APPLICATION LETTER SECTION ===== */
+  .application-letter {
+    background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+    border-left: 6px solid #fca311;
+    color: #14213d;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .letter-heading {
+    color: #14213d;
+    font-weight: 700;
+    border-bottom: 2px solid #fca311;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  .letter-content {
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .email-link {
+    color: #415a77;
+    text-decoration: none;
+  }
+
+  .email-link:hover {
+    color: #fca311;
+    text-decoration: underline;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: #14213d;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  footer a {
+    color: #fca311;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    color: #ffffff;
+  }
+
+  /* ===== RESPONSIVE DESIGN IMPROVEMENTS ===== */
+
+  /* ✅ iPads and large tablets */
+  @media (max-width: 1024px) {
+    .carousel-img {
+      height: 420px; /* keeps same ratio without zooming */
+      object-position: center top; /* centers image nicely */
+    }
+
+    .carousel-caption h1 {
+      font-size: 1.9rem;
+    }
+
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+  }
+
+  /* ✅ Small tablets and landscape phones */
+  @media (max-width: 820px) {
+    .carousel-img {
+      height: 360px; /* avoids too much zoom-in */
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .carousel-caption h1 {
+      font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* ✅ Mobile phones */
+  @media (max-width: 576px) {
+    .carousel-img {
+      height: 300px; /* keeps full image visible on phones */
+      object-fit: contain; /* shows whole image instead of cropping */
+      background-color: #000; /* fills space if image has transparent edges */
+    }
+
+    .carousel-caption {
+      bottom: 1rem;
+      padding: 0 1rem;
+    }
+
+    .carousel-caption h1 {
+      font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+      font-size: 0.9rem;
+    }
+  }
