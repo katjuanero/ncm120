@@ -192,6 +192,68 @@ body {
   max-height: 1000px;
 }
 
+/* ===== QUESTION TEXTBOXES ===== */
+.question-textbox {
+  width: 100% !important;
+  max-width: 800px !important;
+  padding: 14px 16px !important;
+  margin-top: 12px !important;
+  margin-bottom: 16px !important;
+  border: 2px solid #fca311 !important;
+  border-radius: 12px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #14213d !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%) !important;
+  cursor: text !important;
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(252, 163, 17, 0.1) !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+.question-textbox::placeholder {
+  color: #999 !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+/* ===== HOVER STATE ===== */
+.question-textbox:hover {
+  border-color: #fca311 !important;
+  box-shadow: 0 6px 18px rgba(252, 163, 17, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ===== FOCUS STATE ===== */
+.question-textbox:focus {
+  outline: none !important;
+  border-color: #415a77 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f5ff 100%) !important;
+  box-shadow: 0 0 0 4px rgba(252, 163, 17, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ===== ACTIVE/TYPING STATE ===== */
+.question-textbox:active {
+  box-shadow: 0 2px 8px rgba(252, 163, 17, 0.2) !important;
+  transform: translateY(0) !important;
+}
+
+/* ===== RESPONSIVE TEXTBOXES ===== */
+@media (max-width: 768px) {
+  .question-textbox {
+    max-width: 100% !important;
+    padding: 12px 14px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+
 /* ===== GOALS BOXES ===== */
 .goal-section {
   background-color: #ffffff;
