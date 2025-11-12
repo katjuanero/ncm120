@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>II. Strategic Goals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CUSTOM CSS -->
+  <link href="StrategicGoals.css" rel="stylesheet">
+
+  <style>
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+      position: fixed;
+      top: 85px;
+      left: 30px;
+      background-color: #fca311;
+      color: #14213d;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1001;
+    }
+
+    .back-btn:hover {
+      background-color: #415a77;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .back-btn {
+        left: 15px;
+        top: 75px;
+        padding: 6px 16px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbgcolor fixed-top">
+    <div class="container-fluid p-2">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <h3 class="mb-0" style="color: #ffffff; margin-left: 10px;"><strong>NCM 120</strong></h3>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <div class="vr d-none d-lg-block"></div>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="AboutMe.html">About Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ BACK BUTTON -->
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+  <div class="container content-wrapper">
+    <div class="main-content fade-in">
+      <div class="container marketing">
+        <hr class="featurette-divider">
+
+        <!-- ========== STRATEGIC GOALS ========== -->
+        <div class="row featurette">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">IV. Interview Preparedness</h2>
+            <br>
+            <strong>Probable Interview Question Responses</strong><br><br>
+
+            <!-- ===== ACCORDION ===== -->
+            <div class="accordion" id="interviewAccordion">
+
+              <!-- Question 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Tell me more about yourself</strong>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#interviewAccordion">
+                  <div class="accordion-body">
+                    My journey into healthcare began at a young age, inspired by my grandmother, who worked as a midwife. Watching her care for others with patience and dedication planted in me a deep respect for the profession and a dream to enter the world of healthcare.<br><br>
+                    Before becoming a nurse, my experiences as a student journalist and student leader helped me develop strong communication, empathy, and leadership skills. Those experiences shaped my passion for service and advocacy—values that continue to guide my practice today.<br><br>
+                    As a nurse, I take pride in providing safe, evidence-based, and compassionate care to every patient I encounter. I am committed to continuous learning and professional growth, aiming to become a nurse who not only heals but also inspires others through compassion, competence, and integrity.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                   <strong>What are your strengths and weaknesses as a nurse</strong>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#interviewAccordion">
+                  <div class="accordion-body">
+                    My greatest strengths as a nurse are compassion, adaptability, and strong critical-thinking skills, ensuring that the care I provide goes beyond physical needs. Having worked in both Medical-Surgical and Emergency settings, I’ve developed the ability to stay calm and focused even under pressure. I also take pride in being a good communicator, which allows me to coordinate effectively with colleagues and provide holistic, patient-centered care.<br><br>
+                    One of my weaknesses is that I sometimes tend to take on too many responsibilities at once, especially when I want to ensure that all my patients receive the best care possible. I’ve learned, however, that nursing is a team effort, and that delegating tasks appropriately not only maintains efficiency but also improves patient safety.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>Why do you want to work at St. Luke’s Medical Center</strong>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#interviewAccordion">
+                  <div class="accordion-body">
+                    I admire St. Luke’s for its commitment to excellence, continuous education, and compassionate care. Working in your institution would allow me to grow professionally while contributing to a culture that values quality and integrity in healthcare.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- ===== END ACCORDION ===== -->
+            <hr class="featurette-divider">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <!-- ✅ SCRIPT FOR BACK BUTTON -->
+  <script>
+    function goBack() {
+      if (document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = "AboutMe.html";
+      }
+    }
+  </script>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== FOOTER OUTSIDE CONTAINER ===== -->
+  <footer>
+    © 2025 Kheziah Nicole Cusay.
+  </footer>
+</body>
+</html>

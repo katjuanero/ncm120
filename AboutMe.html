@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - NCM 120</title>
 
   <!-- BOOTSTRAP -->
@@ -11,137 +12,115 @@
   <link href="AboutMe.css" rel="stylesheet">
 
   <!-- POPPINS FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- ✅ NAVBAR -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbgcolor fixed-top">
     <div class="container-fluid p-2">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <h3 class="mb-0" style="color: #ffffff; margin-left: 10px;"><strong>NCM 120</strong></h3>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand text-white ms-2" href="#"><strong>NCM 120</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item mx-2">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <div class="vr d-none d-lg-block"></div>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="AboutMe.html">About Me</a>
-          </li>
+          <li class="nav-item mx-2"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="AboutMe.html">About Me</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ✅ MAIN CONTENT -->
-  <main>
-    <div class="content-wrapper container mt-5 pt-5">
-      <div class="main-content fade-in">
-        <div id="aboutMeContent">
-          <div class="d-flex justify-content-between align-items-start mb-4">
-            <div>
-              <h1 class="fw-bold">Welcome to My Page!</h1>
-              <p class="text-muted" style="max-width: 1000px;">
-                A closer look into my journey, experiences, and professional growth as a nurse.
-              </p>
-            </div>
-            <div class="text-end">
-              <span class="fw-bold custom-date">November 10, 2025</span>
-            </div>
+  <!-- MAIN CONTENT -->
+  <main class="container my-5 pt-5">
+    <div class="row gx-5">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-8">
+        <!-- INTRO -->
+        <div class="card glass-card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Professional Nurse Portfolio</h2>
+            <hr class="featurette-divider">
+            <p class="lead">A closer look into my journey, experiences, and professional growth as a nurse.</p>
+            <span class="text-muted">November 10, 2025</span>
           </div>
+        </div>
 
-          <div class="container marketing">
-
-            <!-- ========== I. PROFESSIONAL DOCUMENTATION ========== -->
+        <!-- PROFESSIONAL DOCUMENTATION -->
+        <div class="card glass-card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">I. Professional Documentation</h3>
             <hr class="featurette-divider">
-            <div class="row featurette">
-              <div class="col-md-12">
-                <h2 class="featurette-heading">I. Professional Documentation</h2>
-                <p class="lead">
-                  <strong>Summary of Qualifications</strong><br>
-                  Licensed Registered Nurse with 3 years of comprehensive hospital experience delivering safe, high-quality care across Medical-Surgical and Emergency Nursing units.
-                </p>
-                <a href="ProfessionalDoc.html" class="btn btn-outline-primary btn-sm mt-2">View Full Section</a>
-              </div>
-            </div>
+            <p class="lead">
+            <a href="ProfessionalDoc.html" class="btn btn-modern mt-2">View Full Section</a>
+          </div>
+        </div>
 
-            <!-- ========== II. STRATEGIC SELF-ASSESSMENT & GOALS ========== -->
+        <!-- STRATEGIC SELF-ASSESSMENT -->
+        <div class="card glass-card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">II. Strategic Self-Assessment & Goals</h3>
             <hr class="featurette-divider">
-            <div class="row featurette">
-              <div class="col-md-12">
-                <h2 class="featurette-heading">II. Strategic Self-Assessment & Goals</h2>
-                <p class="lead">
-                  <strong>Personal Inventory (Clinical Interests, Needs Prioritization)</strong><br>
-                  Focused on Medical-Surgical and Emergency Nursing, with strong adaptability and interest in continuous learning and leadership growth.
-                </p>
-                <a href="StrategicGoals.html" class="btn btn-outline-primary btn-sm mt-2">View Full Section</a>
-              </div>
-            </div>
+            <p class="lead">
+            <a href="StrategicGoals.html" class="btn btn-modern mt-2">View Full Section</a>
+          </div>
+        </div>
 
-            <!-- ========== III. CORE COMPETENCIES ========== -->
+        <!-- CORE COMPETENCIES -->
+        <div class="card glass-card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">III. Organizational Research & Fit</h3>
             <hr class="featurette-divider">
-            <div class="row featurette">
-              <div class="col-md-12">
-                <h2 class="featurette-heading">III. Organizational Research & Fit</h2>
-                <p class="lead">
-                  • Patient Assessment & Critical Thinking<br>
-                  • Medical-Surgical & Emergency Nursing<br>
-                  • IV Therapy & Medication Administration<br>
-                  • Emergency Triage & Trauma Response<br>
-                  • Infection Control & Aseptic Techniques<br>
-                  • Interdisciplinary Collaboration<br>
-                  • Documentation & Leadership
-                </p>
-                <a href="CoreCompetencies.html" class="btn btn-outline-primary btn-sm mt-2">View Full Section</a>
-              </div>
-            </div>
+            </p>
+            <a href="CoreCompetencies.html" class="btn btn-modern mt-2">View Full Section</a>
+          </div>
+        </div>
 
-            <!-- ========== IV. PROFESSIONAL EXPERIENCE ========== -->
+        <!-- INTERVIEW PREPAREDNESS -->
+        <div class="card glass-card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">IV. Interview Preparedness</h3>
             <hr class="featurette-divider">
-            <div class="row featurette">
-              <div class="col-md-12">
-                <h2 class="featurette-heading">IV. Interview Preparedness</h2>
-                <p class="lead">
-                 Probable Interview Question Responses: Outline planned responses to probable interview questions to avoid fumbling or rambling. 
-                </p>
-                <a href="ProfessionalExperience.html" class="btn btn-outline-primary btn-sm mt-2">View Full Section</a>
-              </div>
-            </div>
-
-          </div> <!-- End container -->
+            <a href="ProfessionalExperience.html" class="btn btn-modern mt-2">View Full Section</a>
+          </div>
         </div>
       </div>
 
-      <!-- ✅ CONTACT BOX -->
-      <div class="contact-container">
-        <div class="contact-box p-3 mb-3 shadow-sm">
-          <h5 class="contact-title mb-3 text-center"><strong>📍 Contact Info</strong></h5>
-          <p class="mb-1">Kheziah Nicole Cusay, RN</p>
-          <p class="mb-1">Kamunsil Street</p>
-          <p class="mb-1">Bacolod City, Negros Occidental</p>
-          <hr>
-          <p class="mb-1">📞 +63 995 418 9439</p>
-          <p class="mb-0">✉️ cusay.kheziahnicole@gmail.com</p>
-          <hr>
-          <p><strong>Date:</strong> November 09, 2025</p>
+      <!-- RIGHT COLUMN: CONTACT -->
+      <div class="col-lg-4">
+        <div class="card glass-card sticky-top mb-4">
+          <div class="card-body">
+            <h5 class="card-title text-center">📍 Contact Info</h5>
+            <p class="mb-0">Kheziah Nicole Cusay, RN</p>
+            <p class="mb-0">Kamunsil Street</p>
+            <p class="mb-0">Bacolod City, Negros Occidental</p>
+            <hr>
+            <p class="mb-0">📞 +63 995 418 9439</p>
+            <p class="mb-0">✉️ cusay.kheziahnicole@gmail.com</p>
+            <hr>
+            <p><strong>Date:</strong> November 09, 2025</p>
+          </div>
         </div>
       </div>
+
     </div>
   </main>
 
-  <!-- ✅ SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <footer>© 2025 Kheziah Nicole Cusay.</footer>
 
-   <footer>
-    © 2025 Kheziah Nicole Cusay.
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const features = document.querySelectorAll('.glass-card');
+    const reveal = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      features.forEach(feature => {
+        const rect = feature.getBoundingClientRect();
+        if (rect.top < triggerBottom) feature.classList.add('show');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
 </body>
 </html>

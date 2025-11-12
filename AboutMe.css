@@ -1,201 +1,135 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* ===== BODY ===== */
+/* BODY */
 body {
-  background-color: #e5e5e5;
+  background: linear-gradient(135deg, #edf0f8, #0a2642);
   color: #14213d;
-  overflow-x: hidden;
   min-height: 100vh;
-  padding-top: 17px;
 }
+ /* ===== NAVBAR ===== */
+  .navbgcolor {
+    background-color: #14213d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
 
-/* ===== NAVBAR ===== */
-.navbgcolor {
-  background-color: #14213d;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
+  .navbar-item {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
 
-.nav-link {
-  color: #ffffff !important;
-  padding: 0.5rem 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.2s ease;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 1rem;
-}
+  .nav-link {
+    color: #ffffff !important;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
 
-.vr {
-  border-left: 2px solid #fca311 !important;
-  opacity: 1 !important;
-  height: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
-  align-self: center;
-}
+  .vr {
+    border-left: 2px solid #fca311 !important;
+    opacity: 1 !important;
+    height: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+  }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #fca311 !important;
-  background-color: #415a77;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #fca311 !important;
+    background-color: #415a77;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
 
-/* ===== MAIN CONTENT WRAPPER ===== */
-.content-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  gap: 30px;
-}
+  .navbar-toggler {
+    border-color: #fca311;
+  }
 
-/* ===== MAIN CONTENT ===== */
-.main-content {
-  flex: 1;
-  margin-top: 20px;
-  min-height: 100vh;
-  padding: 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
-  border-left: 6px solid #fca311;
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fca311' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28252,163,17,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+/* GLASS CARDS */
+.glass-card {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s ease;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
 }
 
-.featurette-heading {
-  color: #14213d;
-  font-weight: 700;
-  border-bottom: 2px solid #fca311;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+.glass-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ===== TEXT STYLES ===== */
+.card-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 .lead {
   color: #415a77;
-  line-height: 1.8;
-  font-size: 15px;
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
-
-
-/* Optional: make bold text slightly darker inside .lead */
-.lead strong {
-  font-weight: 700 !important;
-  color: #000;
+.sticky-top {
+  position: sticky !important;
+  top: 80px; /* Adjust based on your navbar height */
+  margin-top: 1rem;
 }
-
-
-.custom-date {
-  color: #415a77;
-  font-size: medium;
+/* BUTTONS */
+.btn-modern {
+  border: 2px solid #fca311;
+  color: #fca311;
+  border-radius: 12px;
   font-weight: 600;
-}
-
-/* ===== READ MORE BUTTON ===== */
-.read-more-btn {
-  background-color: #fca311;
-  border: none;
-  color: #14213d;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 10px 20px;
+  padding: 8px 18px;
   transition: all 0.3s ease;
 }
 
-.read-more-btn:hover,
-.read-more-btn:focus {
-  background-color: #415a77;
-  color: #ffffff;
+.btn-modern:hover {
+  background: #fca311;
+  color: #14213d;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(252,163,17,0.3);
 }
 
-/* ===== SMOOTH EXPAND ANIMATION ===== */
-.more-text {
-  display: block;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease;
+/* FOOTER */
+footer {
+  background: #14213d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-.more-text.show {
-  max-height: 1000px; /* smooth expand */
-}
-
-/* ===== CONTACT BOX ===== */
-.contact-container {
-  position: sticky;
-  top: 135px;
-  margin-left: 20px;
-  align-self: flex-start;
-  height: fit-content;
-}
-
-.contact-box {
-  width: 320px;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  color: #14213d;
-}
-
-.contact-title {
-  color: #14213d;
-  font-weight: 600;
-}
-
-.contact-box p {
-  font-size: 0.95rem;
-  color: #415a77;
-}
-
- /* ===== FOOTER ===== */
-  footer {
-    background-color: #14213d;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  footer a {
-    color: #fca311;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  footer a:hover {
-    color: #ffffff;
-  }
-
-  
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1200px) {
-  .content-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-container {
-    position: static;
-    margin-top: 2rem;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .sticky-top {
+    position: static !important;
+    margin-top: 1.5rem;
   }
 }
