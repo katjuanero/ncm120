@@ -15,21 +15,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- NAVBAR -->
+  <!-- ✅ NAVBAR -->
   <nav class="navbar navbar-expand-lg navbgcolor fixed-top">
     <div class="container-fluid p-2">
-      <a class="navbar-brand text-white ms-2" href="#"><strong>NCM 120</strong></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <h3 class="mb-0" style="color: #ffffff; margin-left: 10px;"><strong>NCM 120</strong></h3>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item mx-2"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item mx-2"><a class="nav-link" href="AboutMe.html">About Me</a></li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <div class="vr d-none d-lg-block"></div>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="AboutMe.html">About Me</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <!-- MAIN CONTENT -->
   <main class="container my-5 pt-5">

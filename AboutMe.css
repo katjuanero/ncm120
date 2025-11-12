@@ -12,6 +12,11 @@ body {
   background: linear-gradient(135deg, #edf0f8, #0a2642);
   color: #14213d;
   min-height: 100vh;
+  font-size: 16px;
+}
+
+html {
+  font-size: 16px;
 }
  /* ===== NAVBAR ===== */
   .navbgcolor {
@@ -24,6 +29,11 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
 
+  .navbar-brand {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+
   .navbar-item {
     display: inline-block;
     margin: 0 0.5rem;
@@ -31,13 +41,16 @@ body {
 
   .nav-link {
     color: #ffffff !important;
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 0.75rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     transition: all 0.2s ease;
     border-radius: 4px;
     text-decoration: none;
     font-size: 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .vr {
@@ -47,6 +60,11 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     align-self: center;
+    display: none;
+  }
+
+  .vr.d-lg-block {
+    display: none;
   }
 
   .nav-link:hover,
@@ -60,6 +78,8 @@ body {
 
   .navbar-toggler {
     border-color: #fca311;
+    padding: 0.5rem 0.75rem;
+    min-height: 44px;
   }
 
   .navbar-toggler-icon {
@@ -72,7 +92,7 @@ body {
   backdrop-filter: blur(15px);
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.1);
-  padding: 2rem;
+  padding: 1.5rem;
   margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(40px);
@@ -85,29 +105,38 @@ body {
 }
 
 .card-title {
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 1rem;
+  font-size: 1.50rem;
 }
+
 
 .lead {
   color: #415a77;
   line-height: 1.7;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .sticky-top {
   position: sticky !important;
-  top: 80px; /* Adjust based on your navbar height */
+  top: 90px;
   margin-top: 1rem;
 }
+
 /* BUTTONS */
 .btn-modern {
   border: 2px solid #fca311;
   color: #fca311;
   border-radius: 12px;
   font-weight: 600;
-  padding: 8px 18px;
+  padding: 10px 18px;
   transition: all 0.3s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .btn-modern:hover {
@@ -115,6 +144,15 @@ body {
   color: #14213d;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(252,163,17,0.3);
+}
+
+.btn-modern:active {
+  transform: translateY(0);
+}
+
+.btn-modern:focus-visible {
+  outline: 3px solid rgba(252,163,17,0.3);
+  outline-offset: 2px;
 }
 
 /* FOOTER */
@@ -126,10 +164,174 @@ footer {
   margin-top: 2rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
+/* ===== COMPREHENSIVE RESPONSIVE DESIGN ===== */
+
+/* ✅ TABLETS (768px - 1024px) */
+@media (max-width: 1024px) {
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .lead {
+    font-size: 0.95rem;
+  }
+
+  .glass-card {
+    padding: 1.25rem;
+  }
+
   .sticky-top {
     position: static !important;
     margin-top: 1.5rem;
+  }
+}
+
+/* ✅ SMALL TABLETS & LANDSCAPE PHONES (480px - 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  html {
+    font-size: 15px;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .glass-card {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-modern {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  .sticky-top {
+    position: static !important;
+    margin-top: 1rem;
+  }
+}
+
+/* ✅ MOBILE PHONES (320px - 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.4rem;
+  }
+
+  .vr {
+    display: none !important;
+  }
+
+  .vr.d-lg-block {
+    display: none !important;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .lead {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .glass-card {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+  }
+
+  .btn-modern {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .sticky-top {
+    position: static !important;
+    margin-top: 1rem;
+  }
+
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* ✅ EXTRA SMALL PHONES (< 320px) */
+@media (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+
+  .navbar-brand {
+    font-size: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .lead {
+    font-size: 0.8rem;
+  }
+
+  .glass-card {
+    padding: 0.5rem;
+  }
+
+  .btn-modern {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ✅ LANDSCAPE ORIENTATION */
+@media (max-height: 500px) {
+  .glass-card {
+    margin-bottom: 1rem;
+  }
+
+  .sticky-top {
+    top: 100px;
+  }
+}
+
+/* ✅ HIGH DPI / RETINA DISPLAYS */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .navbar-toggler-icon {
+    background-size: contain;
   }
 }

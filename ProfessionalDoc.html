@@ -57,8 +57,7 @@
         <h3 class="mb-0" style="color: #ffffff; margin-left: 10px;"><strong>NCM 120</strong></h3>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -82,16 +81,18 @@
   <div class="container content-wrapper">
     <div class="main-content fade-in">
       <div class="container marketing">
+         <h2>I. Professional Documentation</h2>
+
         <hr class="featurette-divider">
 
         <!-- ========== PROFESSIONAL DOCUMENTATION ========== -->
         <div class="row featurette">
           <div class="col-md-12">
-            <h2 class="featurette-heading">I. Professional Documentation</h2>
             <p class="lead">
-              <strong>Summary of Qualifications</strong><br>
+             <h5 class="featurette-heading">Summary of Qualifications</h5><br>
               Licensed Registered Nurse with 3 years of comprehensive hospital experience delivering safe, high-quality care across Medical-Surgical and Emergency Nursing units. 
               <span class="more-text">
+                <br>
               <br>• Skilled in patient assessment, care planning, and evidence-based nursing interventions. 
               <br>• Knowledgeable in infection prevention, medication administration, and emergency procedures. 
               <br>• Strong communication, leadership, and documentation abilities in fast-paced clinical environments. 
@@ -185,7 +186,6 @@
               <p class="lead">
               Registered Nurse (RN) - PRC Licensed (Philippines)<br>
               Expiration: May 30, 2027<br>
-              </span>
             </p>
           </div>
         </div>
@@ -206,20 +206,31 @@
       }
     }
 
-    // READ MORE toggle
-    const buttons = document.querySelectorAll('.read-more-btn');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const moreText = btn.previousElementSibling.querySelector('.more-text');
-        if (moreText.style.display === 'inline') {
-          moreText.style.display = 'none';
-          btn.textContent = 'Read More';
-        } else {
-          moreText.style.display = 'inline';
-          btn.textContent = 'Read Less';
-        }
+    // READ MORE toggle (robust)
+    (function() {
+      const buttons = document.querySelectorAll('.read-more-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const container = btn.closest('.col-md-12') || btn.parentElement;
+          const moreText = container ? container.querySelector('.more-text') : null;
+          if (!moreText) return;
+
+          // Prefer CSS-driven expand via class for smooth animation
+          const isShown = moreText.classList.contains('show');
+          if (isShown) {
+            moreText.classList.remove('show');
+            // remove any inline display to allow CSS to control layout
+            moreText.style.display = '';
+            btn.textContent = 'Read More';
+          } else {
+            moreText.classList.add('show');
+            // ensure it's visible even if CSS uses block
+            moreText.style.display = 'block';
+            btn.textContent = 'Read Less';
+          }
+        });
       });
-    });
+    })();
   </script>
 
 
